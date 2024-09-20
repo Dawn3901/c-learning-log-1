@@ -1,0 +1,13 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+	//每年的人口净增长
+	int sceondofyear = 365 * 24 * 60 * 60;
+	int dry_increase = sceondofyear * (1.0 / 7 + 1.0 / 45 - 1.0 / 13);
+	int num0 = 312032486; int n = 0; double num1 = 0;
+	cout<<"请输入年份n：" <<n<< endl;
+	cin >> n;
+	num1 = (n - 2024) * dry_increase + num0;
+	cout<<"n年时，美国人口可能为：" <<num1<< endl;
+}
