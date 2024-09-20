@@ -1,0 +1,19 @@
+#include<iostream>
+#include<math.h>
+using namespace std;
+int main()
+{
+	int a; int b; int c; int C = 0;
+	double circ = 0; double area = 0; double h = 0;
+	cin >> a >> b >> c;
+	area = a * b * sin(c) / 2;
+	h = b * sin(c);
+	C = a * a + b * b - 2 * a * b * cos(c);
+	circ = a + b + pow(C, 0.5);
+	cout << area << endl;
+	cout << circ << endl;
+	cout << h << endl;
+
+	system("pause");
+	return 0;
+}
