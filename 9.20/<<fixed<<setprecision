@@ -1,0 +1,17 @@
+#include<iostream>
+#include<iomanip>
+using namespace std;
+const double PI = 3.14159265358979;
+int main()
+{
+    double r = 0;
+    cin >> r;
+    double area = 0;
+    double circ = 0;
+    area = PI * r * r;
+    circ = PI * r * 2;
+    cout <<fixed<<setprecision(6)<<area  <<" " <<fixed << setprecision(6)<<circ;
+
+        system("pause");
+    return 0;
+}
