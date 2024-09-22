@@ -2,11 +2,13 @@
 #include<math.h>
 
 using namespace std;
-//想用那个开那个
+//想用哪个true哪个
 const bool Use99table = false;
-const bool UseCalculate_int = false;
+const bool UseCalculate_int = true;
 const bool UseCalculate_double = false;
-const bool UsePyramid = true;
+const bool UsePyramid = false;
+
+
 
 void calculate(int& b, int& c)
 {
@@ -17,7 +19,7 @@ void calculate(int& b, int& c)
 	else if (delta > 0) {
 		double p = (-(double)b - sqrt((double)delta)) / 2.0;
 		double q = (-(double)b + sqrt((double)delta)) / 2.0;
-		cout <<"p=" << p << "," <<"q=" << q << endl;
+		cout <<"p=" << p << " " <<"q=" << q << endl;
 	}
 	else cout << "NO" << endl;
 }
@@ -26,10 +28,10 @@ int main()
 {
 	if (UseCalculate_double) {
 		int K;
-		cout << "输入测试用例数目:";
+		/*cout << "输入测试用例数目:";*/
 		cin >> K;
 		while (K--) {
-			cout << "分别输入n,e,d:" << endl;
+			/*cout << "分别输入n,e,d:" << endl;*/
 			int N, E, D;
 			cin >> N >> E >> D;
 			int tmp = E * D - N - 2;
@@ -39,12 +41,12 @@ int main()
 
 	if (UseCalculate_int) {
 		int k;
-		cout << "输入测试用例数目:";
+		/*cout << "输入测试用例数目:";*/
 		cin >> k;
 		while (k--) {
 			long long int n, e, d;
-			cout << "分别输入n,e,d:" << endl;
-			cin >> n >> e >> d;
+	/*		cout << "分别输入n,e,d:" << endl;*/
+			cin >> n >> d >> e;
 			long long int b = e * d - n - 2;
 			long long int del = b * b - 4 * n;
 			if (del < 0) {
@@ -54,8 +56,12 @@ int main()
 				cout << "p=q=" << -b / 2 << endl;
 			}
 			else {
-				cout << "p=" << static_cast<int>((-b - sqrt(del)) / 2) << endl;
-				cout << "q=" << static_cast<int>((-b + sqrt(del)) / 2) << endl;
+				double p = ((-b - sqrt(del)) / 2); 
+				double q = ((-b + sqrt(del)) / 2);
+				if (p - static_cast<int>(p) != 0 || q - static_cast<int>(q) != 0) {
+					cout << "NO" << endl;
+				}
+				else cout << static_cast<int>(p) <<" " << static_cast<int>(q) << endl;
 			}
 		}
 	}
