@@ -2,14 +2,19 @@
 using namespace std;
 int main()
 {
-	int j = 1;
-	for (int i = 0; j <9; j++)
+	int n;
+	cin >> n; int j = 1;
+	for (int i = 0; j < (n + 1); j++)
 	{
-		for (i = 0; i < j; i++)
+		for (i = 0; i < 4 - j; i++)
+		{
+
+			cout << " ";
+		}
+		for (i = 0; i < 2 * j - 1; i++)
 		{
 			cout << "*";
 		}
-		j++;
 		cout << endl;
 	}
 	system("pause");
