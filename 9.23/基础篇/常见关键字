@@ -1,0 +1,49 @@
+#include<iostream>#include<iostream>
+using namespace std;
+int main()
+{
+	//自动变量
+	auto x = 3;
+	cout<<typeid(x).name()<<endl;
+	//bool(布尔)false = 0(除了1以外); ture = 1;
+	//字符char(单引号)
+	char letter = 'a';
+	//整形int short /long int /long long int
+	int a = 0; short b = 0; long c = 0; long long int d = 0;
+	//浮点（小数）float/double(双精度)/long double（更nb的精度）
+	float e = 0;
+	//???未学习符号数signed/unsigned
+	//???枚举enum（给出int的数字）
+	enum coler
+	{
+		green = 0,red = 1,blue = 2
+	};
+	//???联合类型（可以有多个数据，但任意时刻仅一个数据成员可以有数值）
+	union price
+	{
+		char q; int y; double z;
+	};
+	//???结构与类struct/class
+	//sizeof
+	cout << sizeof int(x) << endl;
+	//static_cast<int>()很多用法比如改变变量名字
+	//public：公有（不受访问限制）
+	//protected:保护的(只能在本类，派生类访问)
+	//private:私有（只能在本类访问）
+	//const:用于修饰变量为常量
+	//using:引入命名空间（如using namespace std;）
+	//???空类型 void，其函数无需返回值
+	//if，else
+	//if（条件）{代码}else if(){}else{}
+	//break:跳出for,while,switch/continue跳到一个循环的起始部位/goto无条件跳跃到函数标记处（飞雷神！）
+	/*
+	逻辑
+	&&与（且）
+	||或
+	^(异或)？？？不懂
+	！非
+	*/
+	//return:输出返回值
+	system("pause");
+	return 0;
+}
