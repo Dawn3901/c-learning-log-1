@@ -1,0 +1,24 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+    int n;
+    cin >> n;
+    switch (n)
+    {
+    case 1:cout << "huan ying ben ke xin sheng ru xue";
+        break;
+    case 2:cout << "huan ying hui xiao";
+        break;
+    case 3:cout << "huan ying yan jiu sheng xin sheng ru xue";
+        break;
+    case 4:cout << "huan ying hui xiao";
+        break;
+    default:cout << "weizhi";
+    }
+
+
+
+    system("pause");
+    return 0;
+}
