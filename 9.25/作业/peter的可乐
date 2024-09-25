@@ -1,0 +1,10 @@
+Peter 有 n 瓶可乐，他每喝完一瓶可乐就会把瓶盖保存起来，k(k>1)个瓶盖可以换一个新的可乐（允许借瓶盖但要还），那么 Peter 最终能喝到多少可乐
+#include<iostream>
+using namespace std;
+int main()
+{
+	int n; int k;
+	cin >> n >> k;
+	cout << n * k / (k - 1);
+	return 0;
+}
