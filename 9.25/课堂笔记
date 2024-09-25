@@ -1,0 +1,23 @@
+#include<iostream>
+#include<string>
+using namespace std;
+int main()
+{
+	//字符变量与逻辑运算
+	char a = 'B';
+	cout << a<<endl;
+	//字符有ASCLL码
+	cout << ++a <<endl;
+	int i = 0;
+	char arr[]{ 'h','e','l','l','o' };
+	for (i = 0; i < 5; i++)
+	{
+		cout << arr[i];
+	}
+	cout << endl;
+	string GREET = "hello_world!!!";
+	cout << GREET;
+	//逻辑运算符号
+	//与（且）&&，或||,非！,是==,不是!=
+	return 0;
+}
