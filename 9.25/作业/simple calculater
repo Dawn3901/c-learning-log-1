@@ -1,0 +1,15 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+    int a; int b; char op;
+    cin >> a;
+    cin >> op;
+    cin >> b;
+    if (op == '+') { cout << a + b; }
+    if (op == '-') { cout << a - b; }
+    if (op == '*') { cout << a * b; }
+    if (op == '/') { cout << a / b; }
+
+    return 0;
+}
