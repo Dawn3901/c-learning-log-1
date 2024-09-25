@@ -1,0 +1,15 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    int a, b, c; 
+    const double PI = 3.14159265358979323846; 
+    cin >> a >> b >> c;
+    double c_rad = c * PI / 180.0;
+    double d = sqrt(a * a + b * b - 2 * a * b * cos(c_rad));
+    double s = (double)a * b * sin(c_rad) / 2;
+    double l = (double)a + b + d;
+    double h = 2 * s / a; 
+    cout << fixed << setprecision(4) << s << " " << l << " " << h << endl;
+    return 0;
+}
