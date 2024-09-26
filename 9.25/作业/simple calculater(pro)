@@ -1,0 +1,33 @@
+#include<iostream>
+using namespace std;
+
+int main() {
+    long long a,b; 
+    char op;
+    cin >> a>>op>>b;
+    if (op == '+')
+    {
+        cout << a + b;
+    }
+    if (op == '-')
+    {
+        cout << a - b;
+    }
+    if (op == '*') 
+    {
+        cout << a * b;
+    }
+    if (op == '/') 
+    {
+        if (b != 0) 
+        {
+            cout << a / b;
+        }
+        else 
+        {
+            cout << "Error: Division by zero"; 
+        }
+    }
+
+    return 0;
+}
