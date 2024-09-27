@@ -1,0 +1,34 @@
+#include<iostream>
+#include<cmath>
+using namespace std;
+//数字位数计算
+int countdig(int num)
+{
+	int digs = static_cast<int>(log10(num))+1;
+	if (num == 0) { digs = 1; }
+	return digs;
+}
+//取某位数字并加和
+int select(int num,int digs)
+{
+	int temp = 0;
+	int sum = num % 10;
+	for (int i = 1; i < digs; i++)
+	{
+		num = num / 10;
+		temp = num % 10;
+		sum += temp;
+	}
+	return sum;
+}
+int main()
+{
+	while(1)
+	{
+		int num;
+		cin >> num;
+		if (num == 0) { break; }
+		else { cout << select(num, countdig(num)); }
+	}
+	return 0;
+}
