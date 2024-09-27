@@ -1,21 +1,19 @@
 #include<iostream>
-#include<string>
-
-using namespace std;
 
 int main()
 {
 	while (1)
 	{
-		string n;
-		cin >> n;
+		std::string n;
+		std::cin >> n;
 		if (n == "0") return 0;
 		else {
 			int sum = 0;
-			for (auto i : n) {
-				sum += static_cast<int>(i - '0');
+			for (auto i : n)//auto这里其实应该是char， i:n i从n的第一位开始到最后一位（string真好使）
+			{
+				sum += (i - '0');
 			}
-			cout << sum << endl;
+			std::cout << sum << std:: endl;
 		}
 	}
 
