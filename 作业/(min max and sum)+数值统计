@@ -1,0 +1,41 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+	/*int temp, n;
+	cin >> n;
+	cin >> temp;
+	int max = temp, min = temp,sum = temp;
+	for (int i = 1; i < n; i++)
+	{
+		cin >> temp;
+		if (max < temp) { max = temp; }
+		if (min > temp) { min = temp; }
+		sum += temp;
+	}
+	cout << min << " " << max << " " << sum;
+	*/
+	int n;
+	while(1)
+	{
+		cin >> n;
+		int neg = 0, pos = 0, null = 0, i = 0;
+		if (n != 0)
+		{
+			for (double temp; i < n; i++)
+			{
+				cin >> temp;								
+				if (temp >  0) { pos++; }
+				if (temp <  0) { neg++; }
+				if (temp == 0) { null++; }
+			}	
+			cout << neg << " " << null << " " << pos << endl;
+			continue;
+		}
+		if (n == 0) { break; }	
+	}
+
+
+
+	system("pause");
+}
