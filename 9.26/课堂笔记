@@ -3,9 +3,77 @@ using namespace std;
 int main()
 {
 /*
+分支结构(条件语句)
+*/
+/*
+指针
+int *p，i；
+p = &i;(表示将i的地址存入p,&表示取地址)
+指针亦有类型（其实就是所指变量类型）如char *p;bool *p;double *p;
+int a, * p = &a;
+a = 100;//直接访问a(对象直接访问）
+*p = 100;//*p就是a,间接访问a(指针间接访问）
+(!!!)*p = *p + 1;//等价于a=a+1
+&和*都是自右向左运算符
+地址之前+*表示所指对象（*p = a = *&a）
+
+设p1, p2是相同类型的两个指针，则p2 - p1的结果是两支针之间对象
+的个数，如果p2指针地址大于p1则结果为正，否则为负
+int x[5], * p1 = &x[0], * p2 = &x[4];
+int n;
+n = p2 - p1;//n 的值为4  即为他们之间间隔的元素的个数
+
+设p1、p2是同一个指向类型的两个指针，则p1和p2可以进行关系运算，
+用于比较这两个地址的位置关系即哪一个是靠前或者靠后的元素
+int x[4], * p1 = &x[0], * p2 = &x[4];
+p2 > p1;   //表达式为真
+
+const在*前：指针所指对象不可改变，地址可以赋值
+const int a = 10, b = 20;
+const int* p;
+p = &a;//正确 p不是只读的，把a的地址赋给p，给p赋值是允许的
+p = &b;//正确，p不是只读的
+*p = 42;//把42赋给p所指向的对象。错误，*p是只读的
+
+const地址只能给const地址赋值
+const double pi = 3.14;
+double* ptr = &pi;//错误，ptr是非const所指向的变量
+const double* cptr = &pi;//正确，cptr是const指针变量
+
+
+const 在*之后,在p之前则地址本身不可修改，
+int a = 10, b = 20;
+int* const pc = &a;//pc是const指针
+pc = &b;//错误pc 是只读的
+pc = pc;//错误pc是只读的
+pc++;//错误pc是只读的
+*pc = 100;//正确，a被修改
 
 
 
+
+*/
+
+
+
+/*
+//switch
+
+swtitch(类整(int longlong short enum char))
+{
+case 0:code;
+break;
+case 1:code;                           
+break;
+……
+case n:code;
+break;
+default(剩余情况):code;
+
+
+
+
+}
 
 
 */
